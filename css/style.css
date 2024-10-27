@@ -1,0 +1,429 @@
+:root{
+    --white-100: #F5F5F5;
+    --white-500: #FFFFFF;
+
+    --gray-100:#BCBCBC;
+    --gray-200:#707070;
+    --gray-300:#535050;
+
+    --black-500:#000000;
+
+    --blue-400:#0549E8;
+
+}
+
+/* dark-mode */
+
+.dark-mode{
+    transition: .5s ease-in-out;
+}
+
+body.dark-mode{
+    background-color: var(--black-500);
+}
+
+.app.dark-mode{
+    background-color: var(--black-500);
+}
+
+.box2.dark-mode{
+    background-color: var(--gray-300);
+}
+.user-data h2.dark-mode{
+    color: var(--white-500);
+}
+
+.user-data p.dark-mode{
+    color: var(--gray-100);
+}
+
+.btn.primary.dark-mode{
+    border-color: #6991ed;
+    color: #6991ed;
+}
+
+.btn.primary.dark-mode:hover{
+    background-color: #6991ed;
+    color: var(--white-100);
+}
+
+.btn.second.dark-mode{
+    border-color: var(--white-100);
+    color: var(--white-100);
+}
+
+.btn.second.dark-mode:hover{
+    background-color: var(--white-100);
+    color: var(--black-500);
+}
+
+.my-projects h3.dark-mode{
+    color: var(--gray-100);
+}
+
+.box3 .btn.dark-mode{
+    color: var(--white-500);
+}
+
+.box3 .btn.dark-mode .fa-sun{
+    display: inline;
+}
+.box3 .btn.dark-mode .fa-moon{
+    display: none;
+}
+
+.box1 .social-media.dark-mode li a{
+    color: var(--gray-100);
+}
+
+.box1 .social-media.dark-mode li a:hover{
+    color: var(--white-500);
+}
+
+footer.dark-mode{
+    background-color: var(--gray-300);
+    color: var(--gray-100);
+}
+
+footer.dark-mode h6{
+    color: var(--gray-100);
+}
+
+footer.dark-mode h6 mark{
+    color: var(--white-500);
+}
+
+/* --------------- */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    height: 100%;
+    background-color: var(--white-100);
+
+}
+
+.app{
+    min-height: 100vh;
+    background-color: var(--white-100);
+    display: flex;
+
+}
+
+.box1{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    position: relative;
+}
+
+.box1 .social-media{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+
+   list-style: none;
+   
+
+}
+
+.box1 .social-media li a{
+     color: var(--gray-300);
+     font-size: 1.5rem;
+}
+
+.box1 .social-media li a:hover{
+    color: var(--black-500);
+}
+
+.box2{
+    flex:5;
+    background-color:var(--white-500);
+}
+
+.box2 main{
+    /* display: flex;
+    flex-direction: column;
+    gap: 3rem; */
+    min-height: 100vh;
+}
+
+.box2 main header{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    margin: 0 2rem;
+
+    border-bottom: 1px solid;
+
+    padding:  2rem 0;
+    /* height: 200px; */
+}
+
+
+.img{
+    width: 120px;
+    height: 120px;
+    border:1px solid var(--gray-100);
+    border-radius: 100%;
+
+    margin: 0 auto 1rem auto;
+
+    overflow: hidden;
+    
+    background-image: url(https://github.com/rafaelDesenvolvedor1.png);
+    background-position: center 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    box-shadow: 1px 1px 1px var(--gray-100);
+}
+
+
+
+.user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+   
+}
+
+.user-data h2{
+    color: var(--black-500);
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.user-data p{
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--gray-200);
+
+    margin-top: .5rem;
+}
+
+.principal-buttons{
+    margin-top: 2rem;
+    /* background-color: red; */
+    justify-content: space-between;
+}
+
+.principal-buttons .btn span{
+    letter-spacing: .1rem;
+    font-weight: bold;
+    
+}
+
+.principal-buttons .btn{
+    width:10rem ;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 0;
+    font-size: .9rem;
+    font-weight: bold;
+    color: var(--white-500);
+
+    display: block;
+
+    cursor: pointer;
+
+    transition: .4s;
+
+
+    /* box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75) */
+}
+
+
+.btn.primary{
+    color: var(--blue-400);
+    border: 2px solid var(--blue-400);
+    margin-top: 1rem;
+
+}
+
+.btn.primary:hover{
+    background-color: var(--blue-400);
+    color: var(--white-500);
+}
+
+
+.btn.second{
+    color: var(--black-500);
+    border: 2px solid var(--black-500);
+}
+
+.btn.second:hover{
+    background-color: var(--black-500);
+    color: var(--white-500);
+}
+
+/* Parte dos projetos */
+
+
+.box2 main .my-projects{
+    flex: 5;
+}
+
+
+.my-projects h3{
+    color:var(--gray-300);
+    margin-left: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    font-weight: bold;
+
+    letter-spacing: .2rem;
+}
+
+.my-projects .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin: 2rem auto;
+
+    width: 80%;
+   
+}
+
+.card-title{
+    margin: 1rem 0;
+}
+
+.card-link{
+    font-size: 1.5rem;
+    color: var(--gray-300);
+
+    transition: .2s;
+}
+
+.card-link:hover{
+    color: var(--gray-200);
+}
+
+
+
+.box3{
+    flex:1;
+    display: flex;
+    justify-content: flex-end;
+
+    position: relative;
+}
+
+.box3 .btn{
+    position: absolute;
+    right: 0;
+    top:0;
+
+    margin-top: 1rem;
+    margin-right: 1rem;
+
+    font-size: 1.5rem;
+}
+.box3 .btn .fa-sun{
+    display: none;
+}
+
+
+
+footer{
+    margin-top: 1rem;
+    background-color: var(--white-500);
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 1rem 0;
+
+    /* background-color: red; */
+}
+
+footer ul li{
+    font-size: 2rem;
+}
+
+footer h6{
+    font-size: .8rem;
+    padding: 1rem 0;
+    color: var(--gray-300);
+}
+
+footer h6 mark{
+    font-weight: bold;
+    background-color: transparent;
+}
+
+@media(max-width:800px){
+    .app{
+        flex-direction: column-reverse;
+    }
+
+    .box2 main header{
+        flex-direction: column;
+    }
+
+    .user{
+        flex-direction: column;
+    }
+
+    .principal-buttons{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .principal-buttons .btn{
+        margin:0 !important; 
+    }
+
+    .my-projects h3{
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .my-projects .container{
+        justify-content: center;
+        width: 100%;
+    }
+
+    .box1{
+        justify-content: center;
+        align-items: center;
+    }
+
+   
+    .box1 .social-media{
+        position:relative;
+        display: flex;
+        gap: 1rem;
+
+        margin:2rem 0;
+
+       
+    }
+  
+}
