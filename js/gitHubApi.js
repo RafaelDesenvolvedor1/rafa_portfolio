@@ -17,7 +17,7 @@ function getApiGitHub(){
                 let project = document.createElement('div')
         
 
-                project.innerHTML =` <div class="card" style="width: 18rem;">
+                project.innerHTML =` <div class="card" style="width: 18rem;" data-aos="fade-up">
             <div class="card-body">
                 <h5 class="card-title">${item.name}</h5>
                 <h6 class="card-subtitle mb-2 text-body-secondary">${item.topics.map(t => innerHTML=`<span class='badge text-bg-primary'>${t}</span>`).join(' ')}</h6>

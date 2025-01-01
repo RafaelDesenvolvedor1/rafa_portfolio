@@ -125,11 +125,11 @@ body{
 }
 
 .box1 .social-media{
-    position: absolute;
+    position: fixed;
     left: 0;
-    bottom: 0;
+    top: 0;
     
-    margin-bottom: 2rem;
+    margin-top: 2rem;
     margin-left: 2rem;
 
    list-style: none;
