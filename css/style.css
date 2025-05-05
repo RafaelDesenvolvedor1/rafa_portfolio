@@ -93,6 +93,10 @@ footer.dark-mode h6 mark{
     color: var(--white-500);
 }
 
+footer.dark-mode img{
+    filter: invert(80%);
+}
+
 /* --------------- */
 
 *{
