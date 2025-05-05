@@ -366,6 +366,10 @@ footer ul li{
     font-size: 2rem;
 }
 
+footer ul li img{
+    width: 2rem;
+}
+
 footer h6{
     font-size: .8rem;
     padding: 1rem 0;
