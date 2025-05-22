@@ -126,7 +126,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 2rem .5rem;
   width: 100%;
   background-color: var(--white-500);
   position: relative;
