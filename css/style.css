@@ -126,7 +126,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem .5rem;
+  padding: 2rem;
   width: 100%;
   background-color: var(--white-500);
   position: relative;
@@ -415,6 +415,7 @@ footer h6 mark {
 
   header {
     flex-direction: column;
+    padding: 2rem .5rem;
   }
 
   .user {
@@ -437,7 +438,7 @@ footer h6 mark {
   }
 
   .grid {
-    margin: 0 3rem;
+    margin: 0 2rem;
     display: flex;
   }
 
