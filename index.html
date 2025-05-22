@@ -49,78 +49,72 @@
   </head>
 
   <body>
-    <section class="app">
-      <div class="box1">
-        <ul class="social-media">
-          <li>
-            <a
-              href="https://www.instagram.com/rafasantossalgado/"
-              target="_blank"
-            >
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/rafael-santos-06b5a719a/"
-              target="_blank"
-            >
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/RafaelDesenvolvedor1" target="_blank">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </li>
-        </ul>
+    <header>
+      <div class="user" data-aos="fade-left">
+        <div class="img"></div>
+        <div class="user-data" data-aos="fade-left">
+          <h2 class="name">Rafael Santos Salgado</h2>
+          <p class="cargo">Front-end developer</p>
+        </div>
       </div>
-      <div class="box2">
-        <main>
-          <header>
-            <div class="user" data-aos="fade-left">
-              <div class="img">
-                <!-- <img src="./img/perfil.jpeg" alt=""> -->
-              </div>
-              <div class="user-data" data-aos="fade-left">
-                <h2 class="name">Rafael Santos Salgado</h2>
-                <p class="cargo">Front-end developer</p>
-              </div>
-            </div>
 
-            <div class="principal-buttons" data-aos="fade-left">
-              <a
-                class="btn second"
-                href="mailto:rafa_gc123@hotmail.com"
-                target="_blank"
-              >
-                <span>Contact me</span>
-              </a>
-              <a
-                class="btn primary"
-                href="https://drive.google.com/file/d/1hrRfMK2Wkx_sMsnXFXxlpt-DsExONbMV/view?usp=drive_link"
-                target="_blank"
-              >
-                <span>View CV</span>
-              </a>
-            </div>
-          </header>
+      <div class="principal-buttons" data-aos="fade-left">
+        <a
+          class="btn second"
+          href="mailto:rafa_gc123@hotmail.com"
+          target="_blank"
+        >
+          <span>Contact me</span>
+        </a>
+        <a
+          class="btn primary"
+          href="https://drive.google.com/file/d/1hrRfMK2Wkx_sMsnXFXxlpt-DsExONbMV/view?usp=drive_link"
+          target="_blank"
+        >
+          <span>View CV</span>
+        </a>
+      </div>
+    </header>
 
-          <section class="my-projects">
-            <h3>Meus projetos</h3>
-            <div class="container" id="projects-container">
-              <div class="grid-sizer"></div>
-            </div>
-          </section>
-        </main>
-      </div>
-      <div class="box3">
-        <button type="button" class="btn" data-bs-toggle="button" id="toggle">
-          <i class="fa-solid fa-moon"></i>
-          <i class="fa-solid fa-sun"></i>
-        </button>
-      </div>
+    <section class="scm">
+      <ul class="social-media">
+        <li>
+          <a
+            href="https://www.instagram.com/rafasantossalgado/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/rafael-santos-06b5a719a/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/RafaelDesenvolvedor1" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+      </ul>
     </section>
+
+    <section class="darkMode">
+      <button type="button" class="btn" data-bs-toggle="button" id="toggle">
+        <i class="fa-solid fa-moon"></i>
+        <i class="fa-solid fa-sun"></i>
+      </button>
+    </section>
+
+    <main>
+      <h3>Meus projetos</h3>
+      <div class="grid" id="projects-container">
+        <div class="grid-sizer"></div>
+      </div>
+    </main>
 
     <footer>
       <ul class="container-languages">
@@ -153,7 +147,7 @@
           <i class="fa-brands fa-git-alt"></i>
         </li>
       </ul>
-      <h6>Desenvolvido por <mark>&copy;Rafael Santos Salgado</mark> - 2024</h6>
+      <h6>Desenvolvido por <mark>&copy;Rafael Santos Salgado</mark> - 2025</h6>
     </footer>
 
     <script
@@ -165,10 +159,10 @@
 
     <script src="./js/toggle.js"></script>
 
-    <script src="./js/gitHubApi.js"></script>
-
     <!-- Masonry js  -->
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+    <script src="./js/gitHubApi.js"></script>
 
     <!-- AOS libs  -->
 
@@ -177,12 +171,6 @@
       AOS.init({
         offset: 100,
         duration: 800,
-      });
-
-      new Masonry("#projects-container", {
-        itemSelector: ".grid-item",
-        columnWidth: ".grid-sizer",
-        percentPosition: true,
       });
     </script>
   </body>

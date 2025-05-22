@@ -1,439 +1,472 @@
-:root{
-    --white-100: #F5F5F5;
-    --white-500: #FFFFFF;
+:root {
+  --white-100: #f5f5f5;
+  --white-500: #ffffff;
 
-    --gray-100:#BCBCBC;
-    --gray-200:#707070;
-    --gray-300:#535050;
+  --gray-100: #bcbcbc;
+  --gray-200: #707070;
+  --gray-300: #535050;
 
-    --black-500:#000000;
+  --black-500: #000000;
 
-    --blue-400:#0549E8;
-
+  --blue-400: #0549e8;
 }
 
 /* dark-mode */
 
-.dark-mode{
-    transition: .5s ease-in-out;
+.dark-mode {
+  transition: 0.5s ease-in-out;
 }
 
-body.dark-mode{
-    background-color: var(--black-500);
+body.dark-mode {
+  background-color: var(--black-500);
 }
 
-.app.dark-mode{
-    background-color: var(--black-500);
+/* main .dark-mode {
+  background-color: var(--black-500);
+} */
+
+main.dark-mode,
+body.dark-mode header {
+  background-color: var(--gray-300);
+}
+.user-data h2.dark-mode {
+  color: var(--white-500);
 }
 
-.box2.dark-mode{
-    background-color: var(--gray-300);
-}
-.user-data h2.dark-mode{
-    color: var(--white-500);
+.user-data p.dark-mode {
+  color: var(--gray-100);
 }
 
-.user-data p.dark-mode{
-    color: var(--gray-100);
+.btn.primary.dark-mode {
+  border-color: #6991ed;
+  color: #6991ed;
 }
 
-.btn.primary.dark-mode{
-    border-color: #6991ed;
-    color: #6991ed;
+.btn.primary.dark-mode:hover {
+  background-color: #6991ed;
+  color: var(--white-100);
 }
 
-.btn.primary.dark-mode:hover{
-    background-color: #6991ed;
-    color: var(--white-100);
+.btn.second.dark-mode {
+  border-color: var(--white-100);
+  color: var(--white-100);
 }
 
-.btn.second.dark-mode{
-    border-color: var(--white-100);
-    color: var(--white-100);
+.btn.second.dark-mode:hover {
+  background-color: var(--white-100);
+  color: var(--black-500);
 }
 
-.btn.second.dark-mode:hover{
-    background-color: var(--white-100);
-    color: var(--black-500);
+main h3.dark-mode {
+  color: var(--gray-100);
 }
 
-.my-projects h3.dark-mode{
-    color: var(--gray-100);
+.darkMode .btn.dark-mode {
+  color: var(--white-500);
 }
 
-.box3 .btn.dark-mode{
-    color: var(--white-500);
+.darkMode .btn.dark-mode .fa-sun {
+  display: inline;
+}
+.darkMode .btn.dark-mode .fa-moon {
+  display: none;
 }
 
-.box3 .btn.dark-mode .fa-sun{
-    display: inline;
-}
-.box3 .btn.dark-mode .fa-moon{
-    display: none;
+.scm .social-media.dark-mode li a {
+  color: var(--gray-100);
 }
 
-.box1 .social-media.dark-mode li a{
-    color: var(--gray-100);
+.scm ul.dark-mode li a:hover {
+  color: var(--white-500);
 }
 
-.box1 .social-media.dark-mode li a:hover{
-    color: var(--white-500);
+footer.dark-mode {
+  background-color: var(--gray-300);
+  color: var(--gray-100);
 }
 
-footer.dark-mode{
-    background-color: var(--gray-300);
-    color: var(--gray-100);
+footer.dark-mode h6 {
+  color: var(--gray-100);
 }
 
-footer.dark-mode h6{
-    color: var(--gray-100);
+footer.dark-mode h6 mark {
+  color: var(--white-500);
 }
 
-footer.dark-mode h6 mark{
-    color: var(--white-500);
-}
-
-footer.dark-mode img{
-    filter: invert(80%);
+footer.dark-mode img {
+  filter: invert(80%);
 }
 
 /* --------------- */
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
-body{
-    height: 100%;
-    background-color: var(--white-100);
+body {
+  background-color: var(--white-100);
 
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  grid-template-rows: 0.2fr repeat(2, 1fr) 0.1fr;
+
+  grid-template-areas:
+    "scm header darkmode"
+    "scm main darkmode"
+    "scm main darkmode"
+    "footer footer footer";
 }
 
-.app{
-    min-height: 100vh;
-    background-color: var(--white-100);
-    display: flex;
-
+header {
+  grid-area: header;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  width: 100%;
+  background-color: var(--white-500);
+  position: relative;
 }
 
-.box1{
-    flex:1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
-    position: relative;
+header::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 2rem;
+  height: 1px;
+  display: inline-block;
+  background-color: var(--black-500);
 }
 
-.box1 .social-media{
-    position: fixed;
-    left: 0;
-    top: 0;
-    
-    margin-top: 2rem;
-    margin-left: 2rem;
+header .img {
+  width: 120px;
+  height: 120px;
+  border: 1px solid var(--gray-100);
+  border-radius: 100%;
 
-   list-style: none;
-   
+  margin: 0 auto 1rem auto;
 
+  overflow: hidden;
+
+  background-image: url(https://github.com/rafaelDesenvolvedor1.png);
+  background-position: center 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  box-shadow: 1px 1px 1px var(--gray-100);
 }
 
-.box1 .social-media li a{
-     color: var(--gray-300);
-     font-size: 1.5rem;
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.box1 .social-media li a:hover{
-    color: var(--black-500);
+.user-data h2 {
+  color: var(--black-500);
+  font-weight: bold;
+  font-size: 1.6rem;
 }
 
-.box2{
-    flex:5;
-    background-color:var(--white-500);
+.user-data p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--gray-200);
+
+  margin-top: 0.5rem;
 }
 
-.box2 main{
-    /* display: flex;
-    flex-direction: column;
-    gap: 3rem; */
-    min-height: 100vh;
+.principal-buttons {
+  margin-top: 2rem;
+  /* background-color: red; */
+  justify-content: space-between;
 }
 
-.box2 main header{
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   
-    margin: 0 2rem;
-
-    border-bottom: 1px solid;
-
-    padding:  2rem 0;
-    /* height: 200px; */
+.principal-buttons .btn span {
+  letter-spacing: 0.1rem;
+  font-weight: bold;
 }
 
+.principal-buttons .btn {
+  width: 10rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--white-500);
 
-.img{
-    width: 120px;
-    height: 120px;
-    border:1px solid var(--gray-100);
-    border-radius: 100%;
+  display: block;
 
-    margin: 0 auto 1rem auto;
+  cursor: pointer;
 
-    overflow: hidden;
-    
-    background-image: url(https://github.com/rafaelDesenvolvedor1.png);
-    background-position: center 0;
-    background-size: cover;
-    background-repeat: no-repeat;
+  transition: 0.4s;
 
-    box-shadow: 1px 1px 1px var(--gray-100);
+  /* box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75) */
 }
 
-
-
-.user{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-   
+.btn.primary {
+  color: var(--blue-400);
+  border: 2px solid var(--blue-400);
+  margin-top: 1rem;
 }
 
-.user-data h2{
-    color: var(--black-500);
-    font-weight: bold;
-    font-size: 1.6rem;
+.btn.primary:hover {
+  background-color: var(--blue-400);
+  color: var(--white-500);
 }
 
-.user-data p{
-    font-size: 1rem;
-    font-weight: bold;
-    color: var(--gray-200);
-
-    margin-top: .5rem;
+.btn.second {
+  color: var(--black-500);
+  border: 2px solid var(--black-500);
 }
 
-.principal-buttons{
-    margin-top: 2rem;
-    /* background-color: red; */
-    justify-content: space-between;
+.btn.second:hover {
+  background-color: var(--black-500);
+  color: var(--white-500);
 }
 
-.principal-buttons .btn span{
-    letter-spacing: .1rem;
-    font-weight: bold;
-    
+.scm {
+  grid-area: scm;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  position: relative;
 }
 
-.principal-buttons .btn{
-    width:10rem ;
-    padding: 1rem;
-    border-radius: 2rem;
-    border: 0;
-    font-size: .9rem;
-    font-weight: bold;
-    color: var(--white-500);
+.scm .social-media {
+  position: fixed;
+  left: 0;
+  top: 0;
 
-    display: block;
+  margin-top: 2rem;
+  margin-left: 2rem;
 
-    cursor: pointer;
-
-    transition: .4s;
-
-
-    /* box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75) */
+  list-style: none;
 }
 
-
-.btn.primary{
-    color: var(--blue-400);
-    border: 2px solid var(--blue-400);
-    margin-top: 1rem;
-
+.scm .social-media li a {
+  color: var(--gray-300);
+  font-size: 1.5rem;
 }
 
-.btn.primary:hover{
-    background-color: var(--blue-400);
-    color: var(--white-500);
+.scm .social-media li a:hover {
+  color: var(--black-500);
 }
 
+.darkMode {
+  grid-area: darkmode;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 
-.btn.second{
-    color: var(--black-500);
-    border: 2px solid var(--black-500);
+  position: relative;
 }
 
-.btn.second:hover{
-    background-color: var(--black-500);
-    color: var(--white-500);
+.darkMode .btn {
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  margin-top: 1rem;
+  margin-right: 1rem;
+
+  font-size: 1.5rem;
+}
+.darkMode .btn .fa-sun {
+  display: none;
 }
 
-/* Parte dos projetos */
-
-
-.box2 main .my-projects{
-    flex: 5;
+main {
+  grid-area: main;
+  background-color: var(--white-500);
+  padding-bottom: 3rem;
+  overflow: hidden;
+  /* padding: 2rem; */
 }
 
+main h3 {
+  color: var(--gray-300);
+  margin-left: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 
-.my-projects h3{
-    color:var(--gray-300);
-    margin-left: 3rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  font-weight: bold;
 
-    font-weight: bold;
-
-    letter-spacing: .2rem;
-}
-
-.my-projects #projects-container{
-    display: flex;
-    flex-wrap: wrap;
-
-    margin: 2rem auto;
-
-    width: 80%;
-    height: 100vh;
-   
-}
-
-.card-title{
-    margin: 1rem 0;
-}
-
-.card-link{
-    font-size: 1.5rem;
-    color: var(--gray-300);
-
-    transition: .2s;
-}
-
-.card-link:hover{
-    color: var(--gray-200);
+  letter-spacing: 0.2rem;
 }
 
 
 
-.box3{
-    flex:1;
-    display: flex;
-    justify-content: flex-end;
-
-    position: relative;
+.grid {
+  display: block;
+  margin: 0 5rem;
+  width: 100%;
 }
 
-.box3 .btn{
+.grid-sizer,
+.grid-item {
+  width: 2%; /* 4 colunas */
+  /* padding-left: 10px; */
+  margin: 5px;
+  box-sizing: border-box;
+}
+
+.card,
+.card-title,
+.card-text {
+  word-wrap: break-word;
+}
+
+.card-title {
+  margin: 1rem 0;
+}
+
+.card-link {
+  font-size: 1.5rem;
+  color: var(--gray-300);
+
+  transition: 0.2s;
+}
+
+.card-link:hover {
+  color: var(--gray-200);
+}
+
+.grid-item {
+  background: white;
+  /* padding: 16px;
+      border-radius: 8px; */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  grid-area: footer;
+  margin-top: 1rem;
+  background-color: var(--white-500);
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 1rem 0;
+  padding-top: 1rem;
+
+  /* background-color: red; */
+}
+
+footer ul li {
+  font-size: 2rem;
+}
+
+footer ul li img {
+  width: 2rem;
+}
+
+footer h6 {
+  font-size: 0.8rem;
+  padding: 1rem 0;
+  color: var(--gray-300);
+}
+
+footer h6 mark {
+  font-weight: bold;
+  background-color: transparent;
+}
+
+@media (max-width: 1000px) {
+  .grid-sizer,
+  .grid-item {
+    width: 100%; /* 2 colunas */
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    grid-template-columns: 1fr 0;
+    grid-template-rows: 0.1fr repeat(2, 1fr) 100px 0.1fr;
+
+    grid-template-areas:
+      "header darkmode"
+      "main darkmode"
+      "main darkmode"
+      "scm scm"
+      "footer footer";
+  }
+
+  .darkMode .btn {
     position: absolute;
-    right: 0;
-    top:0;
+  }
 
-    margin-top: 1rem;
-    margin-right: 1rem;
-
-    font-size: 1.5rem;
-}
-.box3 .btn .fa-sun{
-    display: none;
-}
-
-
-
-footer{
-    margin-top: 1rem;
-    background-color: var(--white-500);
-    width: 100%;
-
-    display: flex;
+  header {
     flex-direction: column;
-    align-items: center;
+  }
 
-    
-}
+  .user {
+    flex-direction: column;
+  }
 
-footer ul{
-    list-style: none;
+  .principal-buttons {
     display: flex;
-    justify-content: center;
     gap: 1rem;
-    flex-wrap: wrap;
-    width: 80%;
-    margin: 1rem 0;
+    align-items: center;
+  }
 
-    /* background-color: red; */
+  .principal-buttons .btn {
+    margin: 0 !important;
+  }
+
+  main h3 {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .grid {
+    margin: 0 3rem;
+    display: flex;
+  }
+
+  .scm .social-media {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+  }
 }
 
-footer ul li{
-    font-size: 2rem;
-}
+@media (max-width: 850px) {
+  body {
+    grid-template-columns: 1fr 0;
+    grid-template-rows: 0.1fr repeat(2, 1fr) 100px 0.1fr;
 
-footer ul li img{
-    width: 2rem;
-}
+    grid-template-areas:
+      "header darkmode"
+      "main main"
+      "main main"
+      "scm scm"
+      "footer footer";
+  }
 
-footer h6{
-    font-size: .8rem;
-    padding: 1rem 0;
-    color: var(--gray-300);
-}
-
-footer h6 mark{
-    font-weight: bold;
-    background-color: transparent;
-}
-
-@media(max-width:800px){
-    .app{
-        flex-direction: column-reverse;
-    }
-
-    .box2 main header{
-        flex-direction: column;
-    }
-
-    .user{
-        flex-direction: column;
-    }
-
-    .principal-buttons{
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-    }
-
-    .principal-buttons .btn{
-        margin:0 !important; 
-    }
-
-    .my-projects h3{
-        text-align: center;
-        margin-left: 0;
-    }
-
-    .my-projects .container{
-        justify-content: center;
-        width: 100%;
-    }
-
-    .box1{
-        justify-content: center;
-        align-items: center;
-    }
-
-   
-    .box1 .social-media{
-        position:relative;
-        display: flex;
-        gap: 1rem;
-
-        margin:2rem 0;
-
-       
-    }
-  
+  .grid-sizer,
+  .grid-item {
+    width: 40%; 
+  }
 }
